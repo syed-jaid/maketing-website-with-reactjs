@@ -1,5 +1,6 @@
 import React from 'react';
 import Footer from '../core/footer';
+import Accordion from './Accordion';
 
 const Home = () => {
     return (
@@ -8,8 +9,6 @@ const Home = () => {
                 <br />
                 <span className='text-[#39ff14]'> + MORE BONUSES AT CHECKOUT!🎁</span>
             </div>
-
-
             <div className='bg-[#e73904] mb-[50px]'>
                 <div className='max-w-[1130px] mx-auto text-center text-white py-4'>
                     <h1 className='font-bold text-[36px] '>Here's everything you need to...</h1>
@@ -265,6 +264,15 @@ const Home = () => {
                         >
                         </iframe>
                     </div>
+                </div>
+                <Accordion />
+                <h1 className='text-[48px] text-center font-bold leading-[50px] mt-[50px] '>
+                    Get <span className='underline'>Everything</span> For Just: <br />
+                    <span className='text-[#e73904] text-[36px]'>$27</span>
+                </h1>
+                <div className='bg-[#e73904] py-4 px-7 mt-6 rounded-[50px] text-center max-w-[980px] mx-auto'>
+                    <h1 className=' text-[36px] font-bold text-white '>GET All Prompts + $1600 in Bonuses Today!</h1>
+                    <h1 className=' text-[14px] text-white'> No questions asked money back guarantee </h1>
                 </div>
             </div>
 
