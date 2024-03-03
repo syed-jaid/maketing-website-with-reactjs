@@ -1,6 +1,13 @@
 import React from 'react';
 import Footer from '../core/footer';
 import Accordion from './Accordion';
+import OrderSummary from './OrderSummary';
+import StopDabbling from './StopDabbling';
+import BonusSection from './BonusSection';
+import ProductComparison from './ProductComparison';
+import InstantlyUnlock from './InstantlyUnlock';
+import AICoachmaker from './AICoachmaker';
+import Accordion2 from './Accordion2';
 
 const Home = () => {
     return (
@@ -10,19 +17,19 @@ const Home = () => {
                 <span className='text-[#39ff14]'> + MORE BONUSES AT CHECKOUT!🎁</span>
             </div>
             <div className='bg-[#e73904] mb-[50px]'>
-                <div className='max-w-[1130px] mx-auto text-center text-white py-4'>
-                    <h1 className='font-bold text-[36px] '>Here's everything you need to...</h1>
+                <div className='max-w-[1130px] mx-auto text-center text-white py-7'>
+                    <h1 className='font-bold text-[36px] '>Here's <span className='underline'>everything</span> you need to...</h1>
 
-                    <h1 className='text-[56px] py-3'>Instantly Unlock Latest 16,000+ Prompts To Train ChatGPT Be Your Personal Digital Intern That Semi-Passively Adds 15-30 Buyers A Day To Your List...
+                    <h1 className='text-[56px] font-semibold leading-[60px] py-3'>Instantly Unlock <span className='underline'>Latest 16,000+ Prompts</span>  To Train ChatGPT Be Your <b>Personal Digital Intern </b>That <b>Semi-Passively</b> Adds 15-30 Buyers A Day To Your List...
                     </h1>
 
-                    <h1 className='text-[28px]'>Without Ever Spending Hours Trying To Crack Your Offer & Create Contents...</h1>
+                    <h1 className='text-[30px]'>Without Ever Spending Hours Trying To Crack Your Offer & Create Contents...</h1>
                     <img className='mx-w-[1160px] mx-auto' src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/3cfYZ62ndd3Fci44OcL9/media/658415d73489e429f466089c.png" alt="" />
 
-                    <h1 className='text-[23px] font-bold italic'> **YOU CAN NOT FIND THESE ON CHATGPT!</h1>
+                    <h1 className='text-[23px] font-bold italic'> **YOU CAN <span className='underline'>NOT</span> FIND THESE ON CHATGPT!</h1>
 
-                    <div className='max-w-[836px] rounded-full mx-auto text-center text-white bg-[#333333] py-2 mt-3 mb-2'>
-                        <h1 className='text-[30px] font-bold'>
+                    <div className='max-w-[836px] rounded-full mx-auto text-center text-white bg-[#333333] py-4 mt-3 mb-2'>
+                        <h1 className='text-[34px] font-bold'>
                             Get All Prompts + $1600 in Bonuses today!
                         </h1>
 
@@ -30,7 +37,7 @@ const Home = () => {
                             NO QUESTION ASKED MONEY BACK GUARANTEE
                         </h2>
                     </div>
-
+                    <img className='mx-auto max-w-[400px]' src="https://selllikecrazybook.com/wp-content/uploads/2019/10/stock-levels.gif" alt="" />
                 </div>
             </div>
 
@@ -38,7 +45,7 @@ const Home = () => {
             <div className=' shadow-lg border max-w-[819px] mx-auto text-center rounded-[15px] py-4 my-5'>
                 <h1 className='text-[100px]'>🔥</h1>
                 <h1 className='text-[24px] font-bold text-[#e73904]'>Limited Time Sale – 90% OFF</h1>
-                <h1 className='text-[36px] font-bold uppercase max-w-[644px] mx-auto '>GET The Best "Done-For-You" AI ChatGPT PROMPTs + Toolkits for Business & experts on the Internet!</h1>
+                <h1 className='text-[36px] font-bold uppercase max-w-[644px] mx-auto '>GET The Best <span className='underline text-[#e73904]'> "Done-For-You"</span> AI ChatGPT PROMPTs + Toolkits for Business & experts on the Internet!</h1>
                 <img className='mx-w-[819px] mx-auto ' src="https://assets.cdn.filesafe.space/3cfYZ62ndd3Fci44OcL9/media/65965c5c539b6d682bbea643.gif" alt="" />
 
                 <div className=' max-w-[650px] mx-auto text-left'>
@@ -274,6 +281,164 @@ const Home = () => {
                     <h1 className=' text-[36px] font-bold text-white '>GET All Prompts + $1600 in Bonuses Today!</h1>
                     <h1 className=' text-[14px] text-white'> No questions asked money back guarantee </h1>
                 </div>
+            </div>
+
+            <img className='mx-auto mt-[70px]' src="https://assets.cdn.filesafe.space/3cfYZ62ndd3Fci44OcL9/media/b5b39dfa-3097-4e1e-8612-98a845432271.png" alt="" />
+
+            <h1 className='text-[50px] text-center font-bold max-w-[1100px] mx-auto leading-[50px] tracking-[-1px] mb-[40px]'>We Are On A Mission To Help <span className='underline text-[#e93d3d]'>Everyday People Like You Succeed…</span> </h1>
+
+            <h1 className='text-[34px] text-center font-bold max-w-[890px] mx-auto leading-[50px] tracking-[-1px] uppercase'>
+                This <span className='underline text-[#e93d3d]'> AI MARKETING PROMPTS + TOOLKITS </span> has helped 1,637+ ONLINE FREELANCERS to launch a freedom business...
+            </h1>
+            <h1 className='text-[24px] text-center font-bold leading-[50px] tracking-[-1px] underline uppercase mt-2'>
+                ...and change their lives forever!
+            </h1>
+
+            <div className='flex gap-[20px] max-w-[1160px] mx-auto mt-[100px]'>
+                <div className='max-w-[360px]  img-card px-[30px] py-[20px] rounded-[15px]'>
+                    <img className='mt-[-45px] w-[70%] mx-auto' src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/3cfYZ62ndd3Fci44OcL9/media/6586a959096557121a878ed8.png" alt="" />
+                    <p className='text-center text-[24px] mt-[30px]'>⭐️⭐️⭐️⭐️⭐️</p>
+                    <p className='text-center text-[16px] mb-5'>
+                        Simon C. <b> closed a $7,400 deal </b> after 7 days learning ChatGPT.
+                    </p>
+                </div>
+                <div className='max-w-[360px] max-h-[527px] img-card px-[30px] py-[20px] rounded-[15px]'>
+                    <img className='mt-[-45px] w-[75%] mx-auto' src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/3cfYZ62ndd3Fci44OcL9/media/6587dd4609655731c593bec2.png" alt="" />
+                    <p className='text-center text-[24px] mt-[30px]'>⭐️⭐️⭐️⭐️⭐️</p>
+                    <p className='text-center text-[16px] mb-5'>
+                        Joshua R. was in a foreign country with no income and <b> closed $1,000 in the first week </b>  after mastering all A.I. toolkits.
+                    </p>
+                </div>
+                <div className='max-w-[360px] max-h-[527px] img-card px-[30px] py-[20px] rounded-[15px]'>
+                    <img className='mt-[-45px] w-[70%] mx-auto' src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/3cfYZ62ndd3Fci44OcL9/media/6586ac0bb3a8812b084ee5d5.png" alt="" />
+                    <p className='text-center text-[24px] mt-[30px]'>⭐️⭐️⭐️⭐️⭐️</p>
+                    <p className='text-center text-[16px] mb-5'>
+                        Jessy went from zero to <b>$12,000 a month</b> with ChatGPT.
+                    </p>
+                </div>
+            </div>
+
+            <div className='flex gap-[20px] max-w-[1160px] mx-auto mt-[100px]'>
+                <div className='max-w-[360px]  img-card px-[30px] py-[20px] rounded-[15px]'>
+                    <img className='mt-[-45px] mx-auto' src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/3cfYZ62ndd3Fci44OcL9/media/6586abb6b3a8816a8e4ee5d0.png" alt="" />
+                    <p className='text-center text-[24px] mt-[30px]'>⭐️⭐️⭐️⭐️⭐️</p>
+                    <p className='text-center text-[16px] mb-5'>
+                        Lucy, ex-engineer hit her first <b> $10,000 </b> within 3 short months.
+                    </p>
+                </div>
+                <div className='max-w-[360px]  img-card px-[30px] py-[20px] rounded-[15px]'>
+                    <img className='mt-[-45px] mx-auto' src="https://elearningindustry.com/wp-content/uploads/2020/11/the-best-way-to-structure-a-zoom-lesson.png" alt="" />
+                    <p className='text-center text-[24px] mt-[30px]'>⭐️⭐️⭐️⭐️⭐️</p>
+                    <p className='text-center text-[16px] mb-5'>
+                        David makes an <b> extra $10k a month </b> while still working as a university lecturer.
+                    </p>
+                </div>
+                <div className='max-w-[360px]  img-card px-[30px] py-[20px] rounded-[15px]'>
+                    <img className='mt-[-45px] mx-auto' src="https://i.ibb.co/s2K5XzD/Untitled.jpg" alt="" />
+                    <p className='text-center text-[24px] mt-[30px]'>⭐️⭐️⭐️⭐️⭐️</p>
+                    <p className='text-center text-[16px] mb-5'>
+                        Aaliyah J. makes <b> $15,000 a month </b> and enjoys more time with her son.
+                    </p>
+                </div>
+            </div>
+            <h1 className='text-[48px] text-center font-bold leading-[50px] mt-[50px] '>
+                Get <span className='underline'>Everything</span> For Just: <br />
+                <span className='text-[#e73904] text-[36px]'>$27</span>
+            </h1>
+            <div className='bg-[#e73904] py-4 px-7 mt-6 rounded-[50px] text-center max-w-[980px] mx-auto'>
+                <h1 className=' text-[36px] font-bold text-white '>GET All Prompts + $1600 in Bonuses Today!</h1>
+                <h1 className=' text-[14px] text-white'> No questions asked money back guarantee </h1>
+            </div>
+            <p className='text-center mt-[10px] mb-[50px]'>This will be the final time we are doing one!</p>
+            <h1 className='text-center text-[32px] font-bold max-w-[900px] mb-[40px] mx-auto'>
+                Unlock the Full Capabilities of ChatGPT With Our Tested-For-You Prompts
+            </h1>
+            <div className='max-w-[575px] mx-auto text-[24px] mb-[30px]'>
+                <p>
+                    Excited about ChatGPT but feel it didn’t match expectations?
+                </p>
+                <p className='my-[35px]'>
+                    You're not alone. However, the current ChatGPT is just a beta, a glimpse of AI's potential.
+                </p>
+                <p className='my-[35px]'>
+                    Surprisingly, 93% of businesses aren't using ChatGPT effectively.
+                </p>
+                <p>
+                    Fully harnessing AI's capabilities requires precise, data-driven prompts.
+                </p>
+            </div>
+            <img className='mx-auto' src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/3cfYZ62ndd3Fci44OcL9/media/6583ee36cd21c2fb3370a802.png" alt="" />
+
+            <div className='max-w-[575px] mx-auto text-[24px] mb-[30px]'>
+                <p className='my-[35px]'>
+                    Even a slight word shift can make or break your results. After all, this is a piece of code – not a human!
+                </p>
+                <p className='my-[35px]'>
+                    That’s why we did all the trial and error for you, so you can simply copy, paste, and scale 👇
+                </p>
+            </div>
+
+            <div className='flex justify-between max-w-[1160px] mx-auto'>
+                <div className='md:w-[545px] rounded-[20px] p-[30px] bg-[#555555] text-center'>
+                    <h1 className='text-white text-[24px] font-bold underline'>How everyone is doing it:</h1>
+                    <p className='text-white text-[24px] mt-[20px]'>❌ Try a few prompts, then quit</p>
+                    <p className='text-white text-[24px]'>❌ Thinking ChatGPT is only for writing and summarizing</p>
+                    <p className='text-white text-[24px]'>❌Unreliable results, varied quality</p>
+                </div>
+                <div className='md:w-[545px] rounded-[20px] p-[30px] bg-[#e73904] text-center'>
+                    <h1 className='text-white text-[24px] font-bold underline'>🌟 How you'll do it using our prompts:</h1>
+                    <p className='text-white text-[24px] mt-[20px]'>✅ Go deep with the exact questions to ask</p>
+                    <p className='text-white text-[24px]'>✅ Using ChatGPT for marketing strategy, creative ideation, compelling writing, and a measurable lift in performance</p>
+                    <p className='text-white text-[24px]'>✅ Training the AI to compound your results</p>
+                </div>
+            </div>
+
+            <BonusSection />
+
+
+            <img className='mx-auto mt-9' src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/3cfYZ62ndd3Fci44OcL9/media/65850bb7096557ec78843ad0.png" alt="" />
+
+            <ProductComparison />
+
+            <InstantlyUnlock />
+
+            <StopDabbling />
+
+            <div className='flex justify-center max-w-[1160px] mx-auto my-[50px]'>
+                <div className='max-w-[545px] mx-auto'>
+                    <img className='max-w-[400px]' src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/3cfYZ62ndd3Fci44OcL9/media/6584047ab07792088de12df0.png" alt="" />
+                    <p className='text-center text-[24px] font-bold'>70% of high performing marketers claimed they have a fully defined AI strategy
+                        <span className='font-normal'>(eConsultancy*) .</span>
+                    </p>
+                </div>
+                <div className='max-w-[545px] mx-auto'>
+                    <img className='max-w-[400px]' src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/3cfYZ62ndd3Fci44OcL9/media/6584047ab07792088de12df0.png" alt="" />
+                    <p className='text-center text-[24px] font-bold'>70% of high performing marketers claimed they have a fully defined AI strategy
+                        <span className='font-normal'>(eConsultancy*) .</span>
+                    </p>
+                </div>
+            </div>
+
+            <AICoachmaker />
+
+            <p className='text-center text-[23px] font-bold mt-[40px]'>Order Summary</p>
+            <img className='mx-auto mt-[10px]' src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/HYXcsVKvx47tAl5wEEaq/media/657d9ade917281ee7877da4f.gif" alt="" />
+            <OrderSummary />
+
+            <h1 className='text-center text-[32px] font-bold '>You're Covered By Our No Questions Asked 60-Day Guarantee</h1>
+
+            <img className='mx-auto max-w-[250px]' src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/TKyEPyTWLdBiy80M6dQT/media/642040a59ccfe053aca635f6.webp" alt="" />
+
+            <p className='text-center text-[23px] max-w-[1130px] mx-auto mt-3 mb-8'>If for any reason you want your money back, just send us a message and we'll give you 100% of your money back plus let you keep access to your purchase. We fully stand behind the quality of our product.</p>
+
+            <div className='bg-[#e73904] py-4 px-7 mt-6 rounded-[50px] text-center max-w-[980px] mx-auto'>
+                <h1 className=' text-[36px] font-bold text-white '>GET All Prompts + $1600 in Bonuses Today!</h1>
+                <h1 className=' text-[14px] text-white'> No questions asked money back guarantee </h1>
+            </div>
+            <p className='text-center'>Zero risk with our 60-day money-back guarantee</p>
+
+            <div className='bg-[#212529] py-[50px] mt-[50px]'>
+                <Accordion2 />
             </div>
 
             <Footer />
