@@ -1,10 +1,9 @@
 import React from "react";
-import CheckoutForm from "./checkout";
 
 const Checkout = () => {
   return (
-    <div className="">
-      <div className=" shadow-lg border max-w-[819px] mx-auto text-center rounded-lg py-4 my-5">
+    <div className="m-4">
+      <div className=" shadow-lg border max-w-[819px] mx-auto text-center rounded-lg py-4 px-4 my-5">
         {/* -------1---------  */}
 
         <div>
@@ -15,7 +14,7 @@ const Checkout = () => {
         </div>
         {/*--------- payment------------ */}
         <div className=" shadow-lg border max-w-[693px] mx-auto text-center rounded-lg py-4 mt-5">
-          <CheckoutForm></CheckoutForm>
+          {/* <CheckoutForm></CheckoutForm> */}
         </div>
 
         <h1 className="font-bold mb-3">
@@ -45,7 +44,7 @@ const Checkout = () => {
             delighted for any reason (or no reason at all) simply let us know
             within 60 days and we'll refund your payment right away.
           </p>
-          <h1 className="pt-5 text-[28px]">
+          <h1 className="pt-5 text-[28px] text-bold">
             Congratulations! Here's Everything You're Getting Today For Only
             $197.00 $27
           </h1>
@@ -284,27 +283,26 @@ const Checkout = () => {
         </div>
 
         {/* ------------- */}
-
-        <div className=" max-w-[650px] mx-auto mt-5">
-          <h1 className=" bg-[#e73904] text-white text-[26px] font-bold">
+        <div className="max-w-[650px] mx-auto mt-5 px-4 sm:px-6 lg:px-8">
+          <h1 className="bg-[#e73904] text-white text-[22px] sm:text-[26px] font-bold px-4 py-2">
             + FAST ACTION BONUSES
           </h1>
           <img
-            className="pt-5 mt-5"
+            className="pt-5 mt-5 w-full h-auto"
             src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/3cfYZ62ndd3Fci44OcL9/media/6583f83bcd21c266f670afcf.png"
           ></img>
           <img
-            className="mt-5"
+            className="mt-5 w-full h-auto"
             src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/TKyEPyTWLdBiy80M6dQT/media/63fe6ac6c7b139380a42e260.png"
           ></img>
         </div>
 
         {/* --------------- */}
 
-        <div>
-          <div className=" py-2 mb-[20px] ">
-            <h1 className=" text-[30px] text-justify max-w-[600px] tracking-[-1px] leading-[30px] mx-auto relative">
-              <span className="text-[#e73904] font-bold text-before">
+        <div className="px-4 sm:px-6 lg:px-8">
+          <div className="py-2 mb-[20px]">
+            <h1 className="text-[24px] sm:text-[30px] text-justify max-w-[600px] tracking-[-1px] leading-[30px] mx-auto relative">
+              <span className="text-[#e73904] font-bold">
                 BONUS - The 'AI MONETIZATION' Blueprint:
               </span>
               <span className="italic">(Finally Revealed) </span> Discover the
@@ -316,161 +314,182 @@ const Checkout = () => {
             </h1>
           </div>
           <img
-            className="max-w-[350px] mx-auto"
+            className="max-w-[350px] w-full h-auto mx-auto"
             src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/3cfYZ62ndd3Fci44OcL9/media/65965c08d7e274e11b1fcd8f.png"
           ></img>
           <img
-            className="mt-5 max-w-[600px] mx-auto"
+            className="mt-5 max-w-[600px] w-full h-auto mx-auto"
             src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/TKyEPyTWLdBiy80M6dQT/media/63fe6ac6c7b139380a42e260.png"
           ></img>
         </div>
+
+
+
+
+
+
+
         {/* -- */}
-        <div>
-          <div className=" py-2 mb-[20px] ">
-            <h1 className=" text-[30px] text-justify max-w-[600px] tracking-[-1px] leading-[30px] mx-auto relative">
-              <span className="text-[#e73904] font-bold text-before">
-                {" "}
+        <div className="px-4 sm:px-6 lg:px-8">
+          <div className="py-2 mb-5">
+            <h1 className="text-[24px] sm:text-[30px] text-justify max-w-[600px] tracking-tight leading-[1.2] mx-auto">
+              <span className="text-[#e73904] font-bold">
                 BONUS - Revolutionary 170+ AI Tools & Templates:
-              </span>{" "}
-              Unlock the{" "}
+              </span>
+              Unlock the
               <span className="underline">
                 TRUE Power of A.I. and Done-For-You
-              </span>{" "}
-              Templates that{" "}
+              </span>
+              Templates that
               <span className="font-bold underline">
                 do 90% of the work for you!
-              </span>{" "}
-              Whether you're looking to automate the tasks, create images 7
-              videos with AI, or simply make your life easier, these tools and
-              resources have got you covered
+              </span>
+              Whether you're looking to automate tasks, create images & videos with AI, or simply make your life easier, these tools and resources have got you covered
               <span className="italic">
-                {" "}
                 (Increased Output And Quality Of Work At Scale)
               </span>
             </h1>
           </div>
           <img
-            className="max-w-[350px] mx-auto"
+            className="max-w-[350px] w-full h-auto mx-auto"
             src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/3cfYZ62ndd3Fci44OcL9/media/659657c08619066018ad83b9.png"
           ></img>
           <img
-            className="mt-5 max-w-[600px] mx-auto"
+            className="mt-5 max-w-[600px] w-full h-auto mx-auto"
             src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/TKyEPyTWLdBiy80M6dQT/media/63fe6ac6c7b139380a42e260.png"
           ></img>
         </div>
         {/* -- */}
-        <div>
-          <div className=" py-2 mb-[20px] ">
-            <h1 className=" text-[30px] text-justify max-w-[600px] tracking-[-1px] leading-[30px] mx-auto relative">
-              <span className="text-[#e73904] font-bold text-before">
+        <div className="px-4 sm:px-6 lg:px-8">
+          <div className="py-2 mb-5">
+            <h1 className="text-[24px] sm:text-[30px] text-justify max-w-[600px] tracking-tight leading-[1.2] mx-auto">
+              <span className="text-[#e73904] font-bold">
                 BONUS - 369 SECRET PROMPTS TO EARNING $10,000+ MONTHLY:
-              </span>{" "}
-              How this 30 coaches used the ChatGPT Prompt™ to{" "}
+              </span>
+              How these 30 coaches used the ChatGPT Prompt™ to
               <span className="font-bold underline">
-                earn over $10,000 monthly{" "}
+                earn over $10,000 monthly
               </span>
               <span className="italic"> (even at a beginner level!) </span>
             </h1>
           </div>
           <img
-            className="max-w-[350px] mx-auto"
+            className="max-w-[350px] w-full h-auto mx-auto"
             src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/3cfYZ62ndd3Fci44OcL9/media/65964665861906901aad4b61.png"
           ></img>
           <img
-            className="mt-5 max-w-[600px] mx-auto"
+            className="mt-5 max-w-[600px] w-full h-auto mx-auto"
             src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/TKyEPyTWLdBiy80M6dQT/media/63fe6ac6c7b139380a42e260.png"
           ></img>
         </div>
+
+
+
+
+
         {/* -- */}
-        <div>
-          <div className=" py-2 mb-[20px] ">
-            <h1 className=" text-[30px] text-justify max-w-[600px] tracking-[-1px] leading-[30px] mx-auto relative">
-              <span className="text-[#e73904] font-bold text-before">
+        <div className="px-4 sm:px-6 lg:px-8">
+          <div className="py-2 mb-5">
+            <h1 className="text-[24px] sm:text-[30px] text-justify max-w-full sm:max-w-[600px] tracking-tight leading-snug mx-auto">
+              <span className="text-[#e73904] font-bold">
                 BONUS - A.I. HIGH TICKET CLOSING FRAMEWORK:
-              </span>{" "}
-              Using our customized <span className="underline">PROVEN</span>{" "}
-              prompts, you can work just a few hours a day And{" "}
+              </span>
+              Using our customized <span className="underline">PROVEN</span> prompts, you can work just a few hours a day and
               <span className="font-bold underline">
                 unlock a high income stream
-              </span>{" "}
-              while{" "}
+              </span>
+              while
               <span className="font-bold underline">
                 enjoying a happy and fulfilling life
-              </span>{" "}
+              </span>
               WITHOUT burning out. No more 24/7 hustle & grind!
             </h1>
           </div>
           <img
-            className="max-w-[350px] mx-auto"
+            className="max-w-[350px] w-full h-auto mx-auto"
             src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/3cfYZ62ndd3Fci44OcL9/media/65965518d7e27419e51fc8d4.png"
           ></img>
           <img
-            className="mt-5 max-w-[600px] mx-auto"
+            className="mt-5 max-w-[600px] w-full h-auto mx-auto"
             src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/TKyEPyTWLdBiy80M6dQT/media/63fe6ac6c7b139380a42e260.png"
           ></img>
         </div>
-
         {/* -- */}
-        <div>
-          <div className=" py-2 mb-[20px] ">
-            <h1 className=" text-[30px] text-justify max-w-[600px] tracking-[-1px] leading-[30px] mx-auto relative">
-              <span className="text-[#e73904] font-bold text-before">
+        <div className="px-4 sm:px-6 lg:px-8">
+          <div className="py-2 mb-5">
+            <h1 className="text-[24px] sm:text-[30px] text-justify max-w-full sm:max-w-[600px] tracking-tight leading-snug mx-auto">
+              <span className="text-[#e73904] font-bold">
                 BONUS - CHATGPT AUTOMATIC SALES:
-              </span>{" "}
-              Customize ChatGPT to your unique business needs with tailored,
-              custom instructions that are optimized for your industry, products
-              and services... allowing you to get optimized results and gain a
-              competitive edge.
+              </span>
+              Customize ChatGPT to your unique business needs with tailored, custom instructions that are optimized for your industry, products, and services... allowing you to get optimized results and gain a competitive edge.
             </h1>
           </div>
           <img
-            className="max-w-[350px] mx-auto"
+            className="max-w-[350px] w-full h-auto mx-auto"
             src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/3cfYZ62ndd3Fci44OcL9/media/65965772539b6d079abe9b85.png"
           ></img>
           <img
-            className="mt-5 max-w-[600px] mx-auto"
+            className="mt-5 max-w-[600px] w-full h-auto mx-auto"
             src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/TKyEPyTWLdBiy80M6dQT/media/63fe6ac6c7b139380a42e260.png"
           ></img>
         </div>
         {/* -- */}
 
+
+
+
+
+
+
+
         {/* -- */}
         <div>
-          <div className=" py-2 mb-[20px] ">
-            <h1 className=" text-[30px] text-justify max-w-[600px] tracking-[-1px] leading-[30px] mx-auto relative">
-              <span className="text-[#e73904] font-bold text-before">
+          <div className="py-2 mb-5 px-4 sm:px-6 lg:px-8">
+            <h1 className="text-[20px] sm:text-[24px] lg:text-[30px] text-justify sm:max-w-[540px] lg:max-w-[600px] mx-auto tracking-tight sm:leading-tight lg:leading-[30px]">
+              <span className="text-[#e73904] font-bold">
                 BONUS - CHATGPT PLUGINS:
-              </span>{" "}
-              Unlock even more possibilities with the best ChatGPT plugins and
-              tools to streamline tasks and boost productivity.
+              </span>
+              Unlock even more possibilities with the best ChatGPT plugins and tools to streamline tasks and boost productivity.
             </h1>
           </div>
         </div>
 
         {/* -------------- */}
 
-        <div className="divide-y divide divide-black max-w-[659px] mx-auto">
-          <p className="mb-5 text-[#e73904] text-[26px] font-bold pt-5">
-            Master ChatGPT while your competitors are still trying to figure it
-            out!
+        <div className="divide-y divide-black max-w-lg mx-auto px-4 sm:max-w-xl md:max-w-2xl">
+          <p className="mb-5 text-[#e73904] text-2xl sm:text-3xl font-bold pt-5 text-center">
+            Master ChatGPT while your competitors are still trying to figure it out!
           </p>
-          <h1 className="pt-5 text-[24px]">
-            Total Value $3,997 <br></br>
-            <span className="line-through">Retail Value $97</span>{" "}
-          </h1>
+          <div className="pt-5 text-center">
+            <h1 className="text-2xl sm:text-3xl">
+              Total Value $3,997
+              <br />
+              <span className="text-base sm:text-lg line-through">Retail Value $97</span>
+            </h1>
+          </div>
         </div>
+
         {/* -------------- */}
 
-        <h1 className="text-[48px] font-bold">
-          Get <span className=" font-bold underline">Everything</span> For Just:{" "}
-          <br></br> $27
-        </h1>
 
-        <button className="font-bold text-white bg-[#e74c3c] text-[36px] px-[50px] p-3 rounded-">
-          Get All Prompts + $1600 <br></br> Toolkits in Bonuses Today!
-        </button>
 
-        <p>Zero risk with our 60-day money-back guarantee</p>
+
+
+
+        <div className="text-center px-4 py-8">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+            Get <span className="underline">Everything</span> For Just:<br /> $27
+          </h1>
+
+          <button className="mt-6 font-bold text-white bg-[#e74c3c] text-xl md:text-3xl px-10 py-4 rounded-md transition-all hover:bg-[#c0392b]">
+            Get All Prompts + $1600 <br className="hidden md:inline" /> Toolkits in Bonuses Today!
+          </button>
+
+          <p className="mt-4 text-lg">
+            Zero risk with our 60-day money-back guarantee
+          </p>
+        </div>
+
         {/* -------------- */}
       </div>
 
