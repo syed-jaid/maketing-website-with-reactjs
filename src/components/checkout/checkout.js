@@ -1,6 +1,8 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
+import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
 import React, { useEffect, useRef, useState } from "react";
 import "intl-tel-input/build/css/intlTelInput.css";
 import intlTelInput from "intl-tel-input";
@@ -9,10 +11,9 @@ import "tailwindcss/tailwind.css"; // Import Tailwi
 import Loading from "./Loading";
 import axios from "axios";
 
-// const stripePromise = loadStripe(process.env.STRIPE_PK);
-// const stripePromise = loadStripe(
-//   "pk_test_51OqGxyLC5VPM7UrEA4nBO7zfb4RWH69EDADCQJm4WfVX4yWyXZX7lMUAUduOqzLsGdRkvAgFNBpBSEIt9YwbWzYf00vRli7JbU"
-// );
+const stripePromise = loadStripe(
+  "pk_test_51OqGxyLC5VPM7UrEA4nBO7zfb4RWH69EDADCQJm4WfVX4yWyXZX7lMUAUduOqzLsGdRkvAgFNBpBSEIt9YwbWzYf00vRli7JbU"
+);
 const CheckoutForm = () => {
   const [cardError, setCardError] = useState("");
   const [success, setSuccess] = useState("");
@@ -89,7 +90,6 @@ const CheckoutForm = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    sendEmail();
     if (validateForm()) {
       if (!stripe || !elements || !clientSecret) {
         return;
@@ -139,6 +139,21 @@ const CheckoutForm = () => {
       }
     }
     // ---
+  };
+
+  const paypalOptions = {
+    "client-id": clientSecret,
+    currency: "USD",
+  };
+
+  const handlePaypalSuccess = (details, data) => {
+    console.log("Transaction completed by: ", details.payer.name.given_name);
+    // Handle successful payment with PayPal
+  };
+
+  const handleStripeSuccess = (result) => {
+    console.log(result);
+    // Handle successful payment with Stripe
   };
 
   const sendEmail = async (e) => {
@@ -346,7 +361,51 @@ const CheckoutForm = () => {
             </table>
           </div>
         </div>
-        {/* --------- */}
+
+        <div>
+          <PayPalScriptProvider options={paypalOptions}>
+            <PayPalButtons
+              createOrder={(data, actions) => {
+                return actions.order.create({
+                  purchase_units: [
+                    {
+                      amount: {
+                        value: amount,
+                      },
+                    },
+                  ],
+                });
+              }}
+              onApprove={(data, actions) => {
+                return actions.order.capture().then((details) => {
+                  handlePaypalSuccess(details, data);
+                });
+              }}
+            />
+          </PayPalScriptProvider>
+          <Elements stripe={stripePromise}>
+            <button
+              onClick={() => {
+                // Handle payment with Stripe
+                handleStripeSuccess("stripe result");
+              }}
+            >
+              <img
+                className="max-w-[400px]"
+                src="https://i.ibb.co/mXbfBWK/image.png"
+                alt="image"
+              />
+            </button>
+          </Elements>
+        </div>
+
+        <div className="flex justify-center items-center space-x-4">
+          <div className="w-full border-t border-gray-300" />
+          <span className="text-sm text-gray-500">OR</span>
+          <div className="w-full border-t border-gray-300" />
+        </div>
+
+        {/* ---- strip ---- */}
         <div className="max-w-4xl mx-auto p-6">
           <div className="p-4 border-[1px] border-[#94959b]" id="payment-card">
             <CardElement
