@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from './Button';
 
 const ProductComparison = () => {
     return (
@@ -99,10 +100,7 @@ const ProductComparison = () => {
                     </p>
                 </div>
             </div>
-            <div className='bg-[#e73904] py-4 px-7 mt-3 rounded-[50px] text-center max-w-[980px] mx-auto uppercase'>
-                <h1 className=' text-[36px] font-bold text-white '>GET All Prompts + $1600 in Bonuses Today!</h1>
-                <h1 className=' text-[14px] text-white'> No questions asked money back guarantee </h1>
-            </div>
+            <Button></Button>
             <p className='text-center'>Zero risk with our 60-day money-back guarantee</p>
         </>
     );

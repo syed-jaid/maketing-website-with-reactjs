@@ -3,7 +3,7 @@ import AccordionItem2 from './AccordionItem2';
 
 const Accordion2 = () => {
     return (
-        <div className='max-w-[1160px] mx-auto '>
+        <div className='max-w-[1160px] mx-auto py-3 px-3'>
             <AccordionItem2 title="Do I get lifetime access?">
                 Yes, you get lifetime access with a login and PDF download link of the 16,000+ ChatGPT Prompt sent to you via email right after completing your order.
             </AccordionItem2>

@@ -1,28 +1,36 @@
 import React from 'react';
+import Button from './Button';
 
 const BonusSection = () => {
     return (
         <div className=" shadow-lg border max-w-[819px] mx-auto text-center rounded-lg py-[50px] px-[50px] my-6">
-            <p className='text-center text-white text-[40px] bg-[#e73904] font-bold leading-[40px] mb-6'>
+            <p className='text-center text-white text-4xl bg-[#e73904] font-bold leading-tight mb-6 px-4'>
                 INCLUDED WITH YOUR ORDER 👇
             </p>
 
             <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/3cfYZ62ndd3Fci44OcL9/media/659645bb8619066963ad4b25.png" alt="" />
 
-            <div className="flex py-2 ml-[40px]">
-                <span className="text-[#e93d3d] text-[30px] mr-2 font-bold">
+            <div className="flex flex-col sm:flex-row py-2 ml-[40px] sm:ml-[40px]">
+                <span className="text-[#e93d3d] text-[20px] sm:text-[30px] mr-2 font-bold">
                     {" "}✓{" "}
                 </span>
                 <ul>
-                    <li className="text-[30px] font-bold ">
+                    <li className="text-[20px] sm:text-[30px] font-bold">
                         16,000+ CHATGPT PROMPTS
                     </li>
                 </ul>
             </div>
-            <p className='text-[24px] text-start ml-[76px] max-w-[617px]'>Get Expert-Crafted ChatGPT Prompts To Grow And Automate All Aspects of Your Business Online!</p>
-            <p className='text-center text-white text-[30px] bg-[#e73904] font-bold mt-6 mb-3 uppercase'>
+            <p className='text-[18px] sm:text-[24px] text-start ml-[20px] sm:ml-[76px] max-w-[617px]'>Get Expert-Crafted ChatGPT Prompts To Grow And Automate All Aspects of Your Business Online!</p>
+            <p className='text-center text-white text-[20px] sm:text-[30px] bg-[#e73904] font-bold mt-6 mb-3 uppercase'>
                 <span className='underline'> free</span> fast action BONUSES
             </p>
+
+
+
+
+
+
+
 
             <div className='pb-[30px] border-b border-[#cbd5e0]'>
                 <p className='text-center text-[#e73904] text-[30px] font-bold mb-6 uppercase'>
@@ -158,9 +166,7 @@ const BonusSection = () => {
 
             <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/3cfYZ62ndd3Fci44OcL9/media/6583ffac3489e45ff6603e67.png" alt="" />
 
-            <button className="font-bold text-white bg-[#e74c3c] text-[32px] px-[50px] p-3 mt-[30px] rounded-[50px]">
-                Get All Prompts + $1600 Toolkits in Bonuses Today!
-            </button>
+            <Button></Button>
 
             <p>Zero risk with our 60-day money-back guarantee</p>
             <img className='max-w-[200px] mx-auto' src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/HYXcsVKvx47tAl5wEEaq/media/64f2fbeff4a33ec146e057be.png" alt="" />

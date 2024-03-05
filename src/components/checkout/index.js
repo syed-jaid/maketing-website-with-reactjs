@@ -1,5 +1,9 @@
 import React from "react";
 import CheckoutForm from "./checkout";
+import { Elements } from "@stripe/react-stripe-js";
+import { loadStripe } from "@stripe/stripe-js";
+
+const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
 
 const Checkout = () => {
   return (
@@ -15,7 +19,9 @@ const Checkout = () => {
         </div>
         {/*--------- payment------------ */}
         <div className=" shadow-lg border max-w-[693px] mx-auto text-center rounded-lg py-4 mt-5">
-          <CheckoutForm></CheckoutForm>
+          <Elements stripe={stripePromise}>
+            <CheckoutForm />
+          </Elements>{" "}
         </div>
 
         <h1 className="font-bold mb-3">
