@@ -79,7 +79,7 @@ const CheckoutForm = () => {
 
   useEffect(() => {
     localStorage.clear();
-    fetch("http://localhost:4000/checkout", {
+    fetch("https://gpt-sable-eight.vercel.app/checkout", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ amount }),
@@ -159,7 +159,7 @@ const CheckoutForm = () => {
   const sendEmail = async (e) => {
     try {
       const response = await axios.post(
-        "http://localhost:4000/sendEmail",
+        "https://gpt-sable-eight.vercel.appsendEmail",
         formData
       );
       setProcessing(false);
