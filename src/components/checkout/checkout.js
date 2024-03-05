@@ -8,12 +8,12 @@ import "intl-tel-input/build/css/intlTelInput.css";
 import intlTelInput from "intl-tel-input";
 import utils from "intl-tel-input/build/js/utils";
 import "tailwindcss/tailwind.css"; // Import Tailwi
+import "intl-tel-input";
 import Loading from "./Loading";
 import axios from "axios";
 
-const stripePromise = loadStripe(
-  "pk_test_51OqGxyLC5VPM7UrEA4nBO7zfb4RWH69EDADCQJm4WfVX4yWyXZX7lMUAUduOqzLsGdRkvAgFNBpBSEIt9YwbWzYf00vRli7JbU"
-);
+const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
+
 const CheckoutForm = () => {
   const [cardError, setCardError] = useState("");
   const [success, setSuccess] = useState("");
@@ -177,9 +177,13 @@ const CheckoutForm = () => {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <div className="px-[30px] mx-auto">
-          <p className="text-[14px] text-[#1571a8] font-bold text-center mb-2">
+      <form
+        className="max-w-[690px] mx-auto lg:max-w-full"
+        onSubmit={handleSubmit}
+      >
+        {/* -----1----- */}
+        <div className="px-4 max-w-[690px] mx-auto md:px-8 ">
+          <p className="text-sm lg:text-base text-[#1571a8] font-bold text-center mb-2">
             Your Contact Information (For Bonuses)...
           </p>
           <div className="mb-4">
@@ -188,7 +192,7 @@ const CheckoutForm = () => {
               name="name"
               value={formData.name}
               onChange={handleChange}
-              className="flex h-10 w-full rounded-md border bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 border-[#dadada] focus:border-[#dadada] focus:ring-[#dadada]"
+              className="w-full block lg:max-w-[690px] rounded-md border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#dadada] focus:border-[#dadada]"
               placeholder="Full Name..."
             />
           </div>
@@ -198,7 +202,7 @@ const CheckoutForm = () => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className="flex h-10 w-full rounded-md border bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 border-[#dadada] focus:border-[#dadada] focus:ring-[#dadada]"
+              className="w-full lg:max-w-[690px] rounded-md border bg-background px-3 py-2 text-sm placeholder-text-muted-foreground focus:outline-none focus:ring-2 focus:ring-[#dadada] focus:border-[#dadada] disabled:opacity-50"
               placeholder="Email Address..."
             />
           </div>
@@ -208,11 +212,12 @@ const CheckoutForm = () => {
             value={formData.number}
             onChange={handleChange}
             ref={phoneInputRef}
-            className="block h-10 w-[634px] rounded-md border bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 border-t border-b border-r border-[#dadada] focus:border-[#dadada] focus:ring-[#dadada]"
+            className=" inline-block sm:w-[400px] md:w-[600px] rounded-md border bg-background px-3 py-2 text-sm placeholder-text-muted-foreground focus:outline-none focus:ring-2 focus:ring-[#dadada] focus:border-[#dadada] disabled:opacity-50"
             placeholder="Phone Number..."
           />
         </div>
-        {/* ---------- */}
+
+        {/* -----2----- */}
         <div className="bg-white px-8 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
@@ -249,16 +254,20 @@ const CheckoutForm = () => {
                   <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
                   <polyline points="22 4 12 14.01 9 11.01"></polyline>
                 </svg>
-                <span className="text-[13px] font-bold">
+                <span className="text-[10px] sm:text-[13px] font-bold">
                   Ultimate ChatGPT Prompt Marketing Toolkits (Special Offer)
                 </span>
               </div>
-              <span className="text-sm font-medium">1</span>
-              <span className="text-sm font-bold text-blue-600">$27.00</span>
+              <span className="text-sm font-medium mx-[20px] text-[10px] sm:text-[13px]">
+                1
+              </span>
+              <span className="text-sm font-bold text-blue-600 text-[10px] sm:text-[13px]">
+                $27.00
+              </span>
             </div>
           </div>
         </div>
-        {/* ---------- */}
+        {/* -----3----- */}
         <div className="m-5">
           <div className="bg-[#fefcbf] rounded-lg pt-6 border-2 border-dotted border-gray-400">
             <div
@@ -273,13 +282,13 @@ const CheckoutForm = () => {
                 alt=""
               />
               <input type="checkbox" />
-              <span className="text-[#009900] ml-1 mt-[-6px] font-bold">
+              <span className="text-[#009900] text-[13px] sm:text-[16px] ml-1 mt-[-6px] font-bold">
                 Add 967 'Personality Prompts' to Create 30 Days Of Amazing
                 Contents
               </span>
             </div>
             <div className="bg-[#fbf8e3] p-3 border-[#ff9900]">
-              <p className="text-[16px] mb-2">
+              <p className="text-[13px] sm:text-[16px] mb-2">
                 <span className="underline text-[#ff0000] font-bold ">
                   90% OFF (This page only) $12:
                 </span>{" "}
@@ -291,27 +300,27 @@ const CheckoutForm = () => {
             </div>
           </div>
         </div>
-        {/* ---------- */}
+        {/* ------4---- */}
         <div className="max-w-4xl mx-auto my-4 px-8">
-          <div className="text-[15px] font-bold pb-2">Order Summary</div>
+          <div className="text-[13px] font-bold pb-2">Order Summary</div>
           <div className="relative w-full overflow-auto">
             <table className="w-full caption-bottom text-sm">
               <thead className="[&amp;_tr]:border-b">
                 <tr className="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
-                  <th className="h-12 align-middle text-muted-foreground [&amp;:has([role=checkbox])]:pr-0 font-bold text-left">
+                  <th className="h-12 align-middle text-muted-foreground [&amp;:has([role=checkbox])]:pr-0 font-bold text-left text-[10px] sm:text-[14px]">
                     Fill In Your Email before select Paypal
                   </th>
-                  <th className="h-12 align-middle text-muted-foreground [&amp;:has([role=checkbox])]:pr-0 font-bold text-center">
+                  <th className="h-12 align-middle text-muted-foreground [&amp;:has([role=checkbox])]:pr-0 font-bold text-center text-[10px] sm:text-[14px]">
                     Quantity
                   </th>
-                  <th className="h-12 align-middle text-muted-foreground [&amp;:has([role=checkbox])]:pr-0 font-bold text-right">
+                  <th className="h-12 align-middle text-muted-foreground [&amp;:has([role=checkbox])]:pr-0 font-bold text-right text-[10px] sm:text-[14px]">
                     Total
                   </th>
                 </tr>
               </thead>
               <tbody className="[&amp;_tr:last-child]:border-0">
                 <tr className="transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
-                  <td className="py-4 align-center text-start ">
+                  <td className="py-4 align-center text-start  text-[11px] sm:text-[14px]">
                     Ultimate ChatGPT Prompt Marketing Toolkits (Special Offer)
                   </td>
                   <td className="py-4 align-middle [&amp;:has([role=checkbox])]:pr-0 text-center text-[#297daf] font-bold">
@@ -325,7 +334,7 @@ const CheckoutForm = () => {
                 <tr className="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
                   {amount === 39 && (
                     <>
-                      <td className=" align-middle text-start">
+                      <td className=" align-middle text-start text-[11px] sm:text-[14px]">
                         Add 967 'Personality Prompts' to Create 30 Days Of
                         Amazing Contents
                       </td>
@@ -340,7 +349,7 @@ const CheckoutForm = () => {
                 </tr>
 
                 <tr className="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
-                  <td className="py-3 align-middle [&amp;:has([role=checkbox])]:pr-0 font-bold text-left">
+                  <td className="py-3 align-middle [&amp;:has([role=checkbox])]:pr-0 font-bold text-left text-[10px] sm:text-[14px]">
                     Order Subtotal
                   </td>
                   <td className="py-3 align-middle [&amp;:has([role=checkbox])]:pr-0"></td>
@@ -349,7 +358,7 @@ const CheckoutForm = () => {
                   </td>
                 </tr>
                 <tr className="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
-                  <td className="py-3 align-middle [&amp;:has([role=checkbox])]:pr-0 font-bold text-left">
+                  <td className="py-3 align-middle [&amp;:has([role=checkbox])]:pr-0 font-bold text-left text-[11px] sm:text-[14px]">
                     Order Total
                   </td>
                   <td className="py-3 align-middle [&amp;:has([role=checkbox])]:pr-0"></td>
@@ -391,7 +400,7 @@ const CheckoutForm = () => {
               }}
             >
               <img
-                className="max-w-[400px]"
+                className="px-4 w-full sm:max-w-[400px]"
                 src="https://i.ibb.co/mXbfBWK/image.png"
                 alt="image"
               />
@@ -399,7 +408,7 @@ const CheckoutForm = () => {
           </Elements>
         </div>
 
-        <div className="flex justify-center items-center space-x-4">
+        <div className="flex justify-center items-center space-x-4 px-4">
           <div className="w-full border-t border-gray-300" />
           <span className="text-sm text-gray-500">OR</span>
           <div className="w-full border-t border-gray-300" />
@@ -407,7 +416,11 @@ const CheckoutForm = () => {
 
         {/* ---- strip ---- */}
         <div className="max-w-4xl mx-auto p-6">
-          <div className="p-4 border-[1px] border-[#94959b]" id="payment-card">
+          <div
+            className=" p-3 border-[1px] rounded-[5px] border-gray-200"
+            id="payment-card"
+            type="submit"
+          >
             <CardElement
               options={{
                 style: {
@@ -794,7 +807,7 @@ const CheckoutForm = () => {
               type="submit"
               disabled={!stripe}
             >
-              <h1 className="text-[34px] text-white font-bold">
+              <h1 className="text-[20px] md:text-[34px] text-white font-bold">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
