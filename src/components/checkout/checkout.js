@@ -79,7 +79,7 @@ const CheckoutForm = () => {
 
   useEffect(() => {
     localStorage.clear();
-    fetch("http://localhost:4000/checkout", {
+    fetch("https://gpt-sable-eight.vercel.app/checkout", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ amount }),
@@ -134,6 +134,7 @@ const CheckoutForm = () => {
       if ((paymentIntent.status = "succeeded")) {
         setSuccess(paymentIntent.status);
         console.log("success.....");
+        window.history.pushState(null, null, `/thankyou`);
         localStorage.setItem("payment", paymentIntent.id);
         sendEmail();
       }
@@ -158,10 +159,7 @@ const CheckoutForm = () => {
 
   const sendEmail = async (e) => {
     try {
-      const response = await axios.post(
-        "http://localhost:4000/sendEmail",
-        formData
-      );
+      const response = await axios.post("sendEmail", formData);
       setProcessing(false);
       window.history.pushState(null, null, `/thankyou`);
       window.location.reload();
